@@ -1,0 +1,18 @@
+
+Heroku URL:
+
+https://nodejs-fs-write-read.herokuapp.com
+
+Write endpoint: 
+
+https://nodejs-fs-write-read.herokuapp.com/write-read
+
+The new files will be created in the folder with current timestamp as the content.
+
+Read endpoint: https://nodejs-fs-write-read.herokuapp.com/read
+
+Contents of all the files available under the folder will be displayed.
+
+Github Repository UEL: https://github.com/MangaiyarkarasiM/nodejs-filesystem.git
+
+Commit Hash ID: 8e189e2d0bd8c8287afa677473d37c9d6a8698ee
