@@ -13,7 +13,7 @@ app.get('/write',(req,res)=>{
     +(date.getHours()<10 ? '0'+date.getHours() : date.getHours())+
     (date.getMinutes()<10 ? '0'+date.getMinutes() : date.getMinutes())+
     (date.getSeconds()<10 ? '0'+date.getSeconds() : date.getSeconds());
-        fs.writeFile(`DateTime/${dateFormat}.txt`,String(date.valueOf()),(err)=>{
+        fs.writeFile(`./DateTime/${dateFormat}.txt`,String(date.valueOf()),(err)=>{
             if(err)
             console.log(err);
         })
@@ -25,13 +25,13 @@ app.get('/write',(req,res)=>{
 app.get('/read',(req,res)=>{
     res.writeHead(200,{"Content-Type":'text/html'})
     let result='';
-    fs.readdir('DateTime',(err,files)=>{
+    fs.readdir('./DateTime',(err,files)=>{
         if(err){
             console.log(err);
         }
         else{
             files.forEach((file)=>{
-            res.write(`Timestamp inside '${file}' file: `+fs.readFileSync(`DateTime/${file}`)+'\n');
+            res.write(`Timestamp inside '${file}' file: `+fs.readFileSync(`./DateTime/${file}`)+'\n');
         })
         res.end();
        }
