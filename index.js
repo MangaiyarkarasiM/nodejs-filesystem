@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 8000;
+const port = process.env.PORT || 8000;
 const fs = require('fs');
 var os = require("os");
 
@@ -38,7 +38,7 @@ app.get('/read',(req,res)=>{
     })
 })
 
-app.listen(PORT,()=>{
-        console.log("server is running",PORT)
+app.listen(port,()=>{
+        console.log("server is running",port)
     })
 
